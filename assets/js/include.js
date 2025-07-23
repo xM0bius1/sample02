@@ -1,12 +1,12 @@
 function includeParts(id, url) {
   fetch(url)
-    .then((res) => res.text())
-    .then((data) => {
+    .then(res => res.text())
+    .then(data => {
       document.getElementById(id).innerHTML = data;
     });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  includeParts("header", "../parts/header.html");
-  includeParts("footer", "../parts/footer.html");
+  includeParts("header", "header.html");
+  includeParts("footer", "footer.html");
 });
